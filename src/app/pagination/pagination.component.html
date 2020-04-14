@@ -1,0 +1,18 @@
+<div class="pagination-container">
+  <div role="toolbar" style="margin: 0;">
+    <div class="btn-group">
+      <label style="margin-top:10px">Page {{currentIndex}}/{{pageNumber}}</label>
+    </div>
+    <div class="btn-group pull-right">
+      <ul class="pagination">
+        <li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}"><span (click)="gotoStartPage()">&lt;&lt;</span></li>
+        <li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}"><span (click)="prevPage()">&lt;</span></li>
+        <li *ngFor="let page of pagesIndex" [ngClass]="{'active': (currentIndex == page)}">
+          <span (click)="setPage(page)">{{page}}</span>
+        </li>
+        <li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}"><span (click)="nextPage()" >&gt;</span></li>
+        <li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}"><span (click)="gotoEndPage()">&gt;&gt;</span></li>
+      </ul>
+    </div>
+  </div>
+</div>

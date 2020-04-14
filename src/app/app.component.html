@@ -1,0 +1,9 @@
+<div class="form">
+  <label class="mn-label" for="mobileNumber">Mobile Number</label>
+  <input type="text" id="mobileNumber" [(ngModel)]="mobileNumber" (ngModelChange)="hideErrorMessage()" name="mobileNumber" placeholder="Enter number..">
+  <button type="button" (click)="generateCombinations()" >Submit</button>
+  <label *ngIf="errorMessage && errorMessage.length > 0" class="error" > {{errorMessage}} </label>
+</div>
+<div class="table">
+  <app-table [data]="tableData" (pageChanged)="pageChanged($event)" ></app-table>  
+</div>

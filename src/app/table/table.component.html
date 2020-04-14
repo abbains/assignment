@@ -1,0 +1,13 @@
+<div *ngIf="totalRecordsCount">
+  <table id="numbers" style="width:100%">
+    <tr>
+      <th>Mobile Number</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td>{{item}}</td>
+    </tr>
+  </table>
+  <app-pagination [pageSize]="pageSize" [dataLength]="totalRecordsCount" [pages]="defaultNoOfPagesToDisplay"
+    (pageChange)="page($event)">
+  </app-pagination>
+</div>
