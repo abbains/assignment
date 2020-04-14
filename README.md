@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Mock server
 
-Go to mock-server path `cd mock-server` . Run `npm run start`. This will start mock server on port 3000 and will act as API to fetch table data and update row.
+Go to mock-server path `cd mock-server` . Run `npm run start`. This will start mock server on port 8080 and will act as API to fetch table data and update row.
 
 In case any issues in running mock server, open app.service.ts file, uncomment the commented lines and comment rest of the lines.
 
